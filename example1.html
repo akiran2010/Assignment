@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 <style>
 body {
-background-color: #ff0000;
+background-color: grey;
 }
 
 h1 {
@@ -30,10 +31,23 @@ align:right;
 
 <p id="demo">Hello Allu, Naveen</p>
 
-<button type="button"
+<button type="button" class="btn btn-default"
 onclick="document.getElementById('demo').innerHTML = 'Doing my Second Masters in Harrisburg University'">
 Click here for more details!</button>
 
+<a href="https://www.facebook.com/kiran.kumar.96995" class="btn btn-default" target="_blank">About Me</a>
+
 <hr/>
-</body>
+Here we added Angular.js below.
+<br/>Please enter any <b>color</b> in textbox below.
+<div ng-app="" ng-init="myCol='orange'">
+
+<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
+</div>
+
+We are using angular.js expressions for above textbox to calculate the color you enter and trying to change color of textbox.
+
+<hr/>
+<div class="col-sm-6 text-left">To mail me click here <b><a href="mailto:akiran2010@gmail.com">Kiran Kumar Alugala</a></b></div></body>
 </html>
